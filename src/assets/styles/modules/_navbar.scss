@@ -1,0 +1,81 @@
+.navbar {
+  float: right;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    :hover {
+      color: $light-gray;
+
+      @include extra-large {
+        color: $dark-gray;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 4rem;
+      height: 0.7rem;
+      background-color: $gold;
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+
+  li {
+    list-style: none;
+    text-align: right;
+    display: block;
+    color: $gold;
+
+    @include large {
+      display: inline-block;
+      float: left;
+      padding-left: 1rem;
+    }
+
+    @include extra-large {
+      padding-left: 4rem;
+
+
+      &::before {
+        pointer-events: none;
+        display: block;
+        content: '';
+        height: $bookmark-height;
+        border-left: 1px solid;
+        margin-top: -$bookmark-height;
+        margin-left: .1rem;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $gold;
+    font-size: 1.5rem;
+
+    @include large {
+      font-size: 1rem;
+      padding-left: .3rem;
+      border-left: .1rem solid;
+    }
+
+    @include extra-large {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  &--pull-right {
+    @include large {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: auto;
+    }
+  }
+}

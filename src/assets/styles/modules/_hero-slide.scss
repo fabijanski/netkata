@@ -1,0 +1,27 @@
+.hero-slide {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  // top: 10%;
+  // left: 10%;
+
+
+  &__number {
+    &:first-child {
+      width: 100px;
+      border-bottom: 2px solid $gold;
+    }
+  }
+
+  &__text {
+
+    &__header {
+
+    }
+
+    &__info {
+
+    }
+  }
+}

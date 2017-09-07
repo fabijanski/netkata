@@ -1,0 +1,79 @@
+.row {
+  @include clearfix();
+
+  @include extra-small {
+    $col-size: xs;
+
+    @for $i from 1 through $columns {
+      &__col-#{$col-size}-#{$i} {
+        float: left;
+        width: 100% / 12 * $i;
+      }
+    }
+    @for $i from 1 through ($columns - 1) {
+      &__col-#{$col-size}-offset-#{$i} {
+        padding-left: 100% / 12 * $i;
+      }
+    }
+  }
+  @include small {
+    $col-size: sm;
+
+    @for $i from 1 through $columns {
+      &__col-#{$col-size}-#{$i} {
+        float: left;
+        width: 100% / 12 * $i;
+      }
+    }
+    @for $i from 1 through ($columns - 1) {
+      &__col-#{$col-size}-offset-#{$i} {
+        padding-left: 100% / 12 * $i;
+      }
+    }
+  }
+  @include medium {
+    $col-size: md;
+
+    @for $i from 1 through $columns {
+      &__col-#{$col-size}-#{$i} {
+        float: left;
+        width: 100% / 12 * $i;
+      }
+    }
+    @for $i from 1 through ($columns - 1) {
+      &__col-#{$col-size}-offset-#{$i} {
+        padding-left: 100% / 12 * $i;
+      }
+    }
+  }
+  @include large {
+    $col-size: lg;
+
+    @for $i from 1 through $columns {
+      &__col-#{$col-size}-#{$i} {
+        float: left;
+        width: 100% / 12 * $i;
+      }
+    }
+    @for $i from 1 through ($columns - 1) {
+      &__col-#{$col-size}-offset-#{$i} {
+        padding-left: 100% / 12 * $i;
+      }
+    }
+  }
+  @include extra-large {
+    $col-size: xl;
+
+    @for $i from 1 through $columns {
+      &__col-#{$col-size}-#{$i} {
+        float: left;
+        width: 100% / 12 * $i;
+      }
+    }
+    @for $i from 1 through ($columns - 1) {
+      &__col-#{$col-size}-offset-#{$i} {
+        padding-left: 100% / 12 * $i;
+      }
+    }
+  }
+}

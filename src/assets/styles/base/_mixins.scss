@@ -1,0 +1,34 @@
+@mixin extra-small {
+  @media only screen and (min-width: $extra-small-width) {
+    @content;
+  }
+}
+@mixin small {
+  @media only screen and (min-width: $small-width) {
+    @content;
+  }
+}
+@mixin medium {
+  @media only screen and (min-width: $medium-width) {
+    @content;
+  }
+}
+@mixin large {
+  @media only screen and (min-width: $large-width) {
+    @content;
+  }
+}
+@mixin extra-large {
+  @media only screen and (min-width: $extra-large-width) {
+    @content;
+  }
+}
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+

@@ -1,0 +1,34 @@
+.page-section {
+  position: relative;
+
+  &--margin-top {
+    margin-top: $header-height;
+
+    @include medium {
+      margin-top: $header-height + 2rem;
+    }
+
+    @include extra-large {
+      margin-top: 2rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+
+  // &--hero-slider {
+  //   background-image: url('~/assets/images/hero-slider--small.png');
+
+  //   @media (min-width: 830px) {
+  //     background-image: url('~/assets/images/hero-slider--medium.png')
+  //   }
+  //   @media (min-width: 1280px) {
+  //     background-image: url('~/assets/images/hero-slider--large.png')
+  //   }
+  // }
+
+
+}
