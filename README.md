@@ -2,7 +2,7 @@
 
 ### Description
 
-PSD to HTML Project.
+PSD to HTML Project. The original conception [here](https://github.com/fabijanski/netkata/blob/master/netkata-original.png).
 
 ### Demo
 
