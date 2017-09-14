@@ -2,9 +2,6 @@
   float: right;
 
   ul {
-    margin: 0;
-    padding: 0;
-
     :hover {
       color: $light-gray;
 
@@ -19,15 +16,15 @@
       height: 0.7rem;
       background-color: $gold;
       display: inline-block;
-      margin-left: 1rem;
+      margin-left: 15px;
+      margin-top: 0.2rem;
     }
   }
 
   li {
-    list-style: none;
     text-align: right;
-    display: block;
-    color: $gold;
+    color: $light-gold;
+    pointer-events: none;
 
     @include large {
       display: inline-block;
@@ -38,23 +35,21 @@
     @include extra-large {
       padding-left: 4rem;
 
-
       &::before {
-        pointer-events: none;
-        display: block;
+        position: absolute;
         content: '';
         height: $bookmark-height;
         border-left: 1px solid;
-        margin-top: -$bookmark-height;
+        margin-top: -$bookmark-height - .5rem;
         margin-left: .1rem;
       }
     }
   }
 
   a {
-    text-decoration: none;
-    color: $gold;
+    pointer-events: all;
     font-size: 1.5rem;
+    color: $gold;
 
     @include large {
       font-size: 1rem;

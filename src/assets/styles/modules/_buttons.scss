@@ -1,0 +1,78 @@
+.button {
+  color: $white;
+  position: absolute;
+  border-radius: 50%;
+  background-color: $gold;
+  z-index: 20;
+
+  &__read-more {
+    width: 5em;
+    height: 5em;
+    right: -0.5em;
+    bottom: -2em;
+
+
+    @include large {
+      right: -1.5em;
+    }
+
+    @include extra-large {
+      right: -1em;
+      bottom: -2em;
+    }
+
+    @include extra-larger {
+      right: -3em;
+      bottom: -1em;
+    }
+
+
+    &--news {
+      bottom: -5em;
+
+      @include large {
+        bottom: -4.5em;
+        right: 0;
+      }
+
+      @include extra-larger {
+        bottom: -3.5em;
+      }
+    }
+  }
+
+  &__scroll {
+    width: 2.5em;
+    height: 2.5em;
+    top: 50%;
+
+    &--next {
+      right: -1.25em;
+    }
+
+    &--previous {
+      left: -1.25em;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 60%;
+    }
+
+    &--next {
+      right: 60%;
+    }
+
+    img {
+      height: 0.8em;
+    }
+  }
+}

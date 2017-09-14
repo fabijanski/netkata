@@ -3,26 +3,37 @@
     @content;
   }
 }
+
 @mixin small {
   @media only screen and (min-width: $small-width) {
     @content;
   }
 }
+
 @mixin medium {
   @media only screen and (min-width: $medium-width) {
     @content;
   }
 }
+
 @mixin large {
   @media only screen and (min-width: $large-width) {
     @content;
   }
 }
+
 @mixin extra-large {
   @media only screen and (min-width: $extra-large-width) {
     @content;
   }
 }
+
+@mixin extra-larger {
+  @media only screen and (min-width: $extra-larger-width) {
+    @content;
+  }
+}
+
 @mixin clearfix {
   &::after {
     content: "";

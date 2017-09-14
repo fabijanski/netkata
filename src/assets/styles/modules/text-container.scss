@@ -1,0 +1,93 @@
+.text-container {
+  position: relative;
+  font-weight: 300;
+
+  h1, h2, h4 {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  p {
+    padding: 0.3em 0;
+    line-height: 1.5;
+
+    @include large {
+      font-size: 0.6em;
+    }
+  }
+
+  &--hero {
+
+    &__slide-number {
+      position: absolute;
+      top: 0;
+      left: -2em;
+      color: $light-gold;
+      width: 40%;
+
+      div {
+        padding-bottom: .5em;
+        margin-top: 1em;
+        font-size: 0.8em;
+      }
+
+      .active {
+        color: $gold;
+        border-bottom: 1px solid;
+      }
+    }
+
+    &__slide-text {
+      padding-top: 2em;
+
+      h1 {
+        color: $gray;
+      }
+
+      h2 {
+        color: $gold;
+      }
+    }
+  }
+
+  &--welcome {
+    color: $white;
+
+    h2 {
+      margin: .2em 0;
+
+      &::first-letter {
+        font-size: 120%;
+      }
+    }
+
+    h4 {
+      color: $gold;
+      margin-top: .2em;
+      margin-bottom: 1em;
+    }
+
+    p:last-child {
+      width: 75%;
+    }
+  }
+
+  &--news {
+    color: $gray;
+    span {
+      font-size: 0.8em;
+      color: $gold;
+      border-bottom: 1px solid $gray;
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 1px solid;
+    }
+
+    h4 {
+      margin-top: 0.8em;
+      margin-bottom: 1.2em;
+    }
+  }
+}

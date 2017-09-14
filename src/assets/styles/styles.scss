@@ -1,36 +1,12 @@
-// SOME USEFULL STUFF FOR RESPONSIVE CSS BACKGROUNDS BELOW:
-
-// NOT SUPPORTED BY FIREFOX YET
-// .page-section--testimonials {
-//   background-image: url('~/assets/images/our-start-landscape-i.jpg');
-//   background-image: image-set(
-//     url('~/assets/images/our-start-landscape-i.jpg') 1x,
-//     url('~/assets/images/our-start-landscape-hi-dpi-i.jpg') 2x
-//   );
-//   background-repeat: repeat;
-// }
-
-// .page-section--testimonials {
-//   background-image: url('~/assets/images/our-start-portrait-i.jpg');
-// }
-// @media (min-width: 800px) {
-//   .page-section--testimonials {
-//     background-image: url('~/assets/images/our-start-landscape-i.jpg');
-//   }
-// }
-// @media (min-width: 1000px) {
-//   .page-section--testimonials {
-//     background-image: url('~/assets/images/our-start-landscape-hi-dpi-i.jpg');
-//   }
-// }
-
 @import "base/variables";
-@import "base/global";
 @import "base/mixins";
+@import "base/global";
 @import "modules/container";
 @import "modules/wrapper";
 @import "modules/row";
 @import "modules/site-header";
 @import "modules/navbar";
 @import "modules/page-section";
-@import "modules/hero-slide";
+@import "modules/text-container";
+@import "modules/buttons";
+@import "modules/site-footer";

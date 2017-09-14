@@ -1,0 +1,148 @@
+.site-footer {
+  color: $light-gray;
+
+  &--h-centered-until-medium {
+  text-align: center;
+
+    @include medium {
+      text-align: left;
+    }
+  }
+
+
+  &__top {
+    padding: 3em 0;
+    background-color: $gray;
+
+    .links {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 0 1em;
+      border-left: 1px solid;
+      text-align: left;
+
+      &:first-child {
+        padding-right: 1em;
+        padding-left: 0;
+        border: none;
+      }
+
+      &:last-child {
+        padding-right: 0em;
+      }
+
+      li {
+        padding-bottom: 0.5em;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      font-size: 0.5em;
+    }
+
+    .subscribe-form {
+      position: relative;
+      font-size: 0.7em;
+      text-transform: uppercase;
+      font-weight: 300;
+      height: 4em;
+      width: 80%;
+      margin: 0 auto;
+
+      @include small {
+        width: 70%;
+      }
+
+      @include medium {
+        width: 100%;
+      }
+
+      @include extra-large {
+        float: right;
+        width: 60%;
+        height: 2em;
+      }
+
+      label {
+        display: block;
+        padding-bottom: 0.5em;
+        text-align: center;
+
+        @include extra-large {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: -40%;
+          padding: 0;
+        }
+      }
+
+      input {
+        position: absolute;
+        left: 0;
+        width: 55%;
+        height: 50%;
+        background: transparent;
+        box-sizing: border-box;
+        border: 1px solid $dark-gray;
+        font-family: inherit;
+        font-size: 0.7em;
+        text-align: center;
+
+        &:focus {
+          outline: none;
+        }
+
+        @include extra-large {
+          height: 100%;
+        }
+      }
+
+      button {
+        position: absolute;
+        left: 55%;
+        width: 45%;
+        height: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        color: $light-gray;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-family: inherit;
+        background-color: $dark-gray;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        @include extra-large {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 1.5em 0;
+    background-color: $dark-gray;
+
+    img {
+      vertical-align: middle;
+    }
+    p {
+      display: inline-block;
+      font-size: 0.4em;
+      vertical-align: middle;
+    }
+    .copy {
+      @include medium {
+        float: right;
+      }
+    }
+  }
+}

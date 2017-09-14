@@ -1,34 +1,120 @@
 .page-section {
-  position: relative;
+  background-size: cover;
+  background-position: center center;
 
-  &--margin-top {
+  @include extra-large {
+    padding-top: 4.5rem;
+  }
+
+  &--hero {
+    position: relative;
     margin-top: $header-height;
+    padding-top: 8%;
+    padding-bottom: 87%;
+    background-image: url('/assets/images/hero-slider--small.png');
+
+    @include small {
+      background-position: top center;
+      background-image: url('~/assets/images/hero-slider--medium.png')
+    }
 
     @include medium {
-      margin-top: $header-height + 2rem;
+      padding-bottom: 60%;
+    }
+
+    @include large {
+      padding-top: 7%;
+      padding-bottom: 50%;
     }
 
     @include extra-large {
-      margin-top: 2rem;
+      padding-bottom: 45%;
+      background-image: url('~/assets/images/hero-slider--large.png')
+    }
+
+    @include extra-larger {
+      padding-top: 3%;
+      padding-bottom: 25%;
+    }
+
+    &__scroll-down {
+      position: absolute;
+      display: none;
+
+      @include extra-large {
+        display: block;
+        top: 80%;
+        right: 5%;
+      }
     }
   }
 
-  &__image {
-    display: block;
-    width: 100%;
+  &--welcome {
+    z-index: 10;
+    position: relative;
+    margin-top: -30%;
+    margin-bottom: -30%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    background-image: url('/assets/images/welcome--small.png');
+
+    @include small {
+      padding-top: 20%;
+      padding-bottom: 20%;
+      margin-top: -20%;
+      margin-bottom: -20%;
+    }
+
+    @include medium {
+      background-image: url('~/assets/images/welcome--medium.png')
+    }
+
+    @include large {
+      padding-top: 15%;
+      padding-bottom: 15%;
+      margin-top: -15%;
+      margin-bottom: -15%;
+      background-image: url('~/assets/images/welcome--large.png')
+    }
+
+    @include extra-large {
+      padding-top: 10%;
+      padding-bottom: 10%;
+      margin-top: -10%;
+      margin-bottom: -10%;
+    }
+
+    @include extra-larger {
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin-top: -6%;
+      margin-bottom: -6%;
+    }
   }
 
+  &--news {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url('/assets/images/news--small.png');
 
-  // &--hero-slider {
-  //   background-image: url('~/assets/images/hero-slider--small.png');
+    @include small {
+      padding-top: 15%;
+      padding-bottom: 15%;
+    }
 
-  //   @media (min-width: 830px) {
-  //     background-image: url('~/assets/images/hero-slider--medium.png')
-  //   }
-  //   @media (min-width: 1280px) {
-  //     background-image: url('~/assets/images/hero-slider--large.png')
-  //   }
-  // }
+    @include medium {
+      padding-top: 20%;
+      background-image: url('~/assets/images/news--medium.png')
+    }
+    @include large {
+      padding-top: 10%;
+      padding-bottom: 10%;
+      background-image: url('~/assets/images/news--large.png')
+    }
 
-
+    @include extra-larger {
+      padding-top: 3%;
+      padding-bottom: 5%;
+    }
+  }
 }

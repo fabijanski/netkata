@@ -1,5 +1,41 @@
 body {
   font-family: 'Lato', sans-serif;
-  overflow-x: hidden;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+  li {
+    list-style: none;
+    line-height: 0;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    color: inherit;
+  }
+
+  @include extra-small {
+    font-size: $font-size-base;
+  }
+  @include small {
+    font-size: 1.25 * $font-size-base;
+  }
+  @include medium {
+    font-size: 1.5 * $font-size-base;
+  }
+  @include large {
+    font-size: 2 * $font-size-base;
+  }
+  @include extra-large {
+    font-size: 2 * $font-size-base;
+  }
+  @include extra-larger {
+    font-size: 2.5 * $font-size-base;
+  }
 }
 

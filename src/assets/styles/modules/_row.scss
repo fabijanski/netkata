@@ -1,6 +1,7 @@
 .row {
   @include clearfix();
 
+
   @include extra-small {
     $col-size: xs;
 
@@ -16,6 +17,7 @@
       }
     }
   }
+
   @include small {
     $col-size: sm;
 
@@ -31,6 +33,7 @@
       }
     }
   }
+
   @include medium {
     $col-size: md;
 
@@ -46,6 +49,7 @@
       }
     }
   }
+
   @include large {
     $col-size: lg;
 
@@ -61,6 +65,7 @@
       }
     }
   }
+
   @include extra-large {
     $col-size: xl;
 
@@ -74,6 +79,28 @@
       &__col-#{$col-size}-offset-#{$i} {
         padding-left: 100% / 12 * $i;
       }
+    }
+  }
+
+  &--position-relative {
+    position: relative;
+  }
+
+  &--padding-top-until-medium {
+    padding-top: 2em;
+
+    @include medium {
+      padding-top: 0;
+    }
+  }
+
+  &--v-centered-on-extra-large {
+    @include extra-large {
+      width: 100%;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

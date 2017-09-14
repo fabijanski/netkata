@@ -3,7 +3,7 @@
   height: 5rem;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
   background-color: $navy-blue;
   border-bottom: 1px solid $gold;
   display: flex;
@@ -36,15 +36,6 @@
     @include large {
       display: inline-block;
     }
-
-
-    // &::before {
-    //   content: '';
-    //   width: 2rem;
-    //   height: 1rem;
-    //   background-color: $gold;
-    //   display: inline-block;
-    // }
   }
 
   &__menu-icon {
