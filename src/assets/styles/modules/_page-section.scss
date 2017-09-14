@@ -11,11 +11,11 @@
     margin-top: $header-height;
     padding-top: 8%;
     padding-bottom: 87%;
-    background-image: url(/assets/images/hero-slider--small.png);
+    background-image: url('/assets/images/hero-slider--small.png');
 
     @include small {
       background-position: top center;
-      background-image: url(/assets/images/hero-slider--medium.png);
+      background-image: url('/assets/images/hero-slider--medium.png');
     }
 
     @include medium {
@@ -29,7 +29,7 @@
 
     @include extra-large {
       padding-bottom: 45%;
-      background-image: url(/assets/images/hero-slider--large.png);
+      background-image: url('/assets/images/hero-slider--large.png');
     }
 
     @include extra-larger {
@@ -56,7 +56,7 @@
     margin-bottom: -30%;
     padding-top: 30%;
     padding-bottom: 30%;
-    background-image: url(/assets/images/welcome--small.png);
+    background-image: url('/assets/images/welcome--small.png');
 
     @include small {
       padding-top: 20%;
@@ -66,7 +66,7 @@
     }
 
     @include medium {
-      background-image: url(/assets/images/welcome--medium.png);
+      background-image: url('/assets/images/welcome--medium.png');
     }
 
     @include large {
@@ -74,7 +74,7 @@
       padding-bottom: 15%;
       margin-top: -15%;
       margin-bottom: -15%;
-      background-image: url(/assets/images/welcome--large.png);
+      background-image: url('/assets/images/welcome--large.png');
     }
 
     @include extra-large {
@@ -95,7 +95,7 @@
   &--news {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url(/assets/images/news--small.png);
+    background-image: url('/assets/images/news--small.png');
 
     @include small {
       padding-top: 15%;
@@ -104,12 +104,12 @@
 
     @include medium {
       padding-top: 20%;
-      background-image: url(/assets/images/news--medium.png);
+      background-image: url('/assets/images/news--medium.png');
     }
     @include large {
       padding-top: 10%;
       padding-bottom: 10%;
-      background-image: url(/assets/images/news--large.png);
+      background-image: url('/assets/images/news--large.png');
     }
 
     @include extra-larger {
