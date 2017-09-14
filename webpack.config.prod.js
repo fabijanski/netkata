@@ -79,7 +79,12 @@ export default {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
-          { loader: "url-loader" }
+          {
+            loader: "url-loader"
+          },
+          {
+            loader: "img-loader"
+          }
         ]
       },
       {
