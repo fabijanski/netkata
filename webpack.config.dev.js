@@ -10,7 +10,8 @@ export default {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'src'),
-    publicPath: '/',
+    publicPath: '',
+    // publicPath: '/',
     filename: 'bundle.js'
   },
   watch: true,
@@ -32,6 +33,17 @@ export default {
           { loader: "sass-loader" }
         ]
       },
+      // {
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   use: [
+      //     {
+      //       loader: "url-loader"
+      //     },
+      //     {
+      //       loader: "img-loader"
+      //     }
+      //   ]
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,

@@ -11,25 +11,31 @@
     }
 
     &::after {
-      content: '';
-      width: 4rem;
-      height: 0.7rem;
-      background-color: $gold;
-      display: inline-block;
-      margin-left: 15px;
-      margin-top: 0.2rem;
+      @include large {
+        content: '';
+        width: 4rem;
+        height: 0.7rem;
+        background-color: $gold;
+        display: inline-block;
+        margin-left: 15px;
+        margin-top: 0.2rem;
+      }
     }
   }
 
   li {
-    text-align: right;
+    text-align: left;
     color: $light-gold;
+    border-bottom: 1px solid;
     pointer-events: none;
+    padding: .8em 0 .8em 1.2em;
 
     @include large {
+      border: none;
+      text-align: right;
       display: inline-block;
       float: left;
-      padding-left: 1rem;
+      padding: 0 0 0 1rem;
     }
 
     @include extra-large {
@@ -64,6 +70,8 @@
   }
 
   &--pull-right {
+    width: 100%;
+
     @include large {
       position: absolute;
       top: 50%;

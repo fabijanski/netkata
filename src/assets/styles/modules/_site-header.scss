@@ -1,40 +1,70 @@
 .site-header {
   position: fixed;
-  height: 5rem;
+  height:$header-height;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   background-color: $navy-blue;
   border-bottom: 1px solid $gold;
+  box-sizing: border-box;
   display: flex;
+
+  @include large {
+    position: relative;
+
+  }
 
   @include extra-large {
     height: $header-height-xl;
     background-color: transparent;
-    position: relative;
     border: none;
   }
 
   &__logo {
-    width: 4rem;
-    height: 4rem;
+    width: 40px;
+    height: 40px;
+
+    @include extra-large {
+      width: 140px;
+      height: 140px;
+    }
 
     img {
       width: 100%;
       height: 100%;
     }
-
-    @include extra-large {
-      width: auto;
-      height: auto;
-    }
   }
 
   &__menu-content {
-    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: $header-height;
+    right: -250px;
+    transition: right .3s ease-in-out;
+    background-color: $navy-blue;
+
 
     @include large {
+      background-color: transparent;
+      position: absolute;
       display: inline-block;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    &--is-visible {
+      top: 0;
+      right: 0;
+      display: block;
+      height: 100%;
+      margin-top: $header-height;
+      z-index: 15;
+
+      @include large {
+        margin: auto;
+      }
     }
   }
 
@@ -42,6 +72,7 @@
     position: relative;
     width: 30px;
     height: 19px;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -51,7 +82,7 @@
       width: 30px;
       height: 3px;
       background-color: $gold;
-      transform-origin: 0 0;
+      transform-origin: 100% 0;
       transition: transform .3s ease-out;
     }
 
@@ -63,7 +94,7 @@
       height: 3px;
       background-color: $gold;
       transition: all .3s ease-out;
-      transform-origin: 0 50%;
+      transform-origin: 100% 50%;
     }
 
     &::after {
@@ -74,7 +105,7 @@
       width: 30px;
       height: 3px;
       background-color: $gold;
-      transform-origin: 0 100%;
+      transform-origin: 100% 100%;
       transition: transform .3s ease-out;
     }
 
@@ -83,20 +114,20 @@
     }
   }
 
-  // &__menu-icon--close-x {
-  //   &::before {
-  //     transform: rotate(45deg) scaleX(1.25);
-  //   }
+  &__menu-icon--close-x {
+    &::before {
+      transform: rotate(-45deg) scaleX(0.8);
+    }
 
-  //   .site-header__menu-icon__middle {
-  //     opacity: 0;
-  //     transform: scaleX(0);
-  //   }
+    .site-header__menu-icon__middle {
+      opacity: 0;
+      transform: scaleX(0);
+    }
 
-  //   &::after {
-  //     transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-  //   }
-  // }
+    &::after {
+      transform: rotate(45deg) scaleX(0.8);
+    }
+  }
 
 }
 
