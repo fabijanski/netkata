@@ -3,8 +3,8 @@
   height:$header-height;
   top: 0;
   width: 100%;
-  z-index: 10;
-  background-color: $navy-blue;
+  z-index: 2;
+  background-color: $dark-gray;
   border-bottom: 1px solid $gold;
   box-sizing: border-box;
   display: flex;
@@ -36,14 +36,16 @@
   }
 
   &__menu-content {
+    position: absolute;
+
     height: 100%;
-    width: 250px;
+    width: $sidebar-width;
     position: fixed;
     top: $header-height;
-    right: -250px;
+    right: -$sidebar-width;
     transition: right .3s ease-in-out;
-    background-color: $navy-blue;
-
+    background-color: $dark-gray;
+    overflow-y: auto;
 
     @include large {
       background-color: transparent;
@@ -58,9 +60,9 @@
       top: 0;
       right: 0;
       display: block;
-      height: 100%;
       margin-top: $header-height;
-      z-index: 15;
+      // position: fixed;
+      z-index: 4;
 
       @include large {
         margin: auto;

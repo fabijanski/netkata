@@ -14,9 +14,12 @@ body {
 
   a {
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: uppercase;;
     line-height: 1;
     color: inherit;
+    font-weight: 300;
+
+
   }
 
   @include extra-small {

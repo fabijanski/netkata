@@ -9,6 +9,9 @@
     }
   }
 
+  a:hover {
+    border-bottom: 1px solid;
+  }
 
   &__top {
     padding: 3em 0;
@@ -134,12 +137,18 @@
     img {
       vertical-align: middle;
     }
+
     p {
       display: inline-block;
       font-size: 0.4em;
       vertical-align: middle;
       padding-left: .5em;
     }
+
+    a {
+      text-transform: none;
+    }
+
     .copy {
       @include medium {
         float: right;

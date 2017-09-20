@@ -4,6 +4,7 @@ class MobileMenu {
   constructor() { // selecting elements from the DOM
     this.menuIcon = $('.site-header__menu-icon');
     this.menuContent = $('.site-header__menu-content');
+    this.overlay = $('.overlay');
     this.events();
   }
 
@@ -14,6 +15,7 @@ class MobileMenu {
   toggleTheMenu() { // defining functionality
     this.menuContent.toggleClass("site-header__menu-content--is-visible");
     this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+    this.overlay.toggleClass("overlay--visible");
   }
 }
 
